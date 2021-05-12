@@ -47,7 +47,7 @@ module.exports = {
       warnings: true,
       errors: true
     },
-    open: true, // 告诉 dev-server 在 server 启动后打开浏览器
+    open: false, // 告诉 dev-server 在 server 启动后打开浏览器
     host: "localhost", // 指定使用一个 host
     port: 1300, // 指定要监听请求的端口号
     https: false, // 是否指定 dev-server 通过 HTTP 提供服务

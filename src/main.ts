@@ -20,4 +20,8 @@ app.use(ElementPlus, { locale });
 import API from "./api/index";
 app.config.globalProperties.$API = API;
 
+// axios
+import Axios from "./plugins/axios";
+app.config.globalProperties.$axios = Axios; //this.Axios
+
 app.mount("#app");
