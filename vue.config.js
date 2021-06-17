@@ -54,12 +54,12 @@ module.exports = {
     hotOnly: false, // 是否启用热模块替换
     /* 后端开发服务器 API 配置  target：重写路径 ws：代理服务器交互 */
     proxy: {
-      "/nfsq": {
+      "/api": {
         // 后端接口
         target: process.env.VUE_APP_URL,
         changeOrigin: true,
         pathRewrite: {
-          "^/nfsq": ""
+          "^/api": ""
         }
       }
     }

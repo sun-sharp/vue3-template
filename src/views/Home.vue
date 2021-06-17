@@ -1,7 +1,10 @@
 <template>
   <div class="home">
-    {{ $API.YearOrdersPercent }}
-    <el-input v-model="input" placeholder="请输入内容"></el-input>
+    <el-input
+      v-model="input"
+      placeholder="请输入内容"
+      @change="handleSelect"
+    ></el-input>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -16,8 +19,13 @@ export default defineComponent({
     HelloWorld
   },
   setup() {
+    const input = ref("");
+    const handleSelect = () => {
+      console.log(input.value);
+    };
     return {
-      input: ref("")
+      input,
+      handleSelect
     };
   }
 });
